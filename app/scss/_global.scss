@@ -37,7 +37,9 @@ textarea {
 	padding: 0 15px;
 }
 
-
+section{
+	padding: 70px 0;
+}
 .sr-only {
 	position: absolute;
 	width: 1px;
@@ -57,6 +59,7 @@ textarea {
 	color: $dark-900;
 	text-align: center;
 	text-transform: uppercase;
+	letter-spacing: 0.03em;
 }
 
 .input {
@@ -66,7 +69,7 @@ textarea {
 }
 
 .btn {
-	padding: 12px 24px;
+	padding: 10px 24px;
 	border: none;
 	border-radius: 6px;
 	color: #fff;
@@ -135,7 +138,7 @@ textarea {
 }
 
 .slick-prev {
-	left: -195px;
+	left: -255px;
 	background-image: url('../images/slider/arrow-left.svg');
 
 	&:hover {
@@ -149,7 +152,7 @@ textarea {
 }
 
 .slick-next {
-	right: -195px;
+	right: -255px;
 	background-image: url('../images/slider/arrow-right.svg');
 
 	&:hover {
