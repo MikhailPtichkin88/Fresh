@@ -1,0 +1,59 @@
+.best {
+  padding: 75px 0 70px;
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  &__btn-box:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  &__btn {
+    position: relative;
+    @extend %opensans-700;
+    font-size: 15px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    border: none;
+    color: $dark-500;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0px;
+      height: 3px;
+      background-color: $green-200;
+      @extend %transition;
+    }
+
+    &.mixitup-control-active {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  &__products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 45px;
+  }
+
+  &__show-more {
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,66 @@
+.banners {
+  padding: 0 0 70px;
+
+  &__wrapper {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__banner {
+    width: calc(25% - 15px);
+    padding: 76px 32px;
+    border-radius: 6px;
+    @extend %bg-img-cover;
+
+    &--veg {
+      background-image: url('../images/banners/veg.jpg');
+    }
+
+    &--bread {
+      background-image: url('../images/banners/bread.jpg');
+    }
+
+    &--big {
+      width: 50%;
+      background-image: url('../images/banners/big.jpg');
+      color: #fff;
+      text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+
+      .banners__title {
+        width: 360px;
+        color: #fff;
+      }
+
+      .banners__link {
+        color: #fff;
+        border-color: #fff;
+      }
+    }
+  }
+
+  &__descr {
+    @extend %opensans-700;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    width: 125px;
+    margin-bottom: 12px;
+    font-size: 30px;
+    text-align: left;
+    color: $dark-500;
+    letter-spacing: normal;
+  }
+
+  &__link {
+    @extend %opensans-700;
+    font-size: 14px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $dark-500;
+    border-bottom: 2px solid $dark-500;
+  }
+}

@@ -1,0 +1,83 @@
+.header {
+
+  &__top {
+    background-color: $dark-800;
+  }
+
+  &__bottom {
+    background-color: $green-900;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 110px;
+  }
+
+  &__search {
+    position: relative;
+    display: flex;
+    border: none;
+    width: 46%;
+  }
+
+  &__icon-btn {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 3px;
+    background-color: transparent;
+    background-image: url('../images/icons/search.svg');
+    @extend %bg-img-auto;
+
+    &:hover {
+      background-color: rgba(#000, 0.1);
+    }
+
+    &:focus {
+      background-color: rgba(#000, 0.1);
+    }
+
+    &:active {
+      background-color: rgba(#000, 0.1);
+      opacity: 0.5;
+      border: none;
+      box-shadow: none;
+      outline: transparent;
+    }
+  }
+
+  &__input {
+    padding: 15px 10px 15px 51px;
+    width: 70%;
+    border: none;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    &::placeholder {
+      font-size: 14px;
+      letter-spacing: 0.03em;
+      color: $dark-800;
+    }
+  }
+
+  &__btn {
+    width: 27%;
+    background-color: $dark-800;
+    color: #fff;
+    @extend %opensans-400;
+    letter-spacing: 0.03em;
+
+    &:hover {
+      background: rgba(49, 53, 43, 0.85);
+    }
+
+    &:focus {
+      background: $dark-800;
+      box-shadow: 0px 0px 0px 4px $green-200;
+    }
+  }
+}

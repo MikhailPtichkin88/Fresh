@@ -1,0 +1,15 @@
+.promo {
+  padding: 75px 0 70px;
+  background-color: #F5F5F5;
+
+  &__products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+  }
+}

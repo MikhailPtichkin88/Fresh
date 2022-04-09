@@ -1,0 +1,155 @@
+.footer {
+
+  &__top {
+    padding: 30px 0 20px;
+    background-color: $dark-800;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 18px;
+    line-height: 1;
+    color: #fff;
+  }
+
+  &__form {
+    margin-right: 150px;
+  }
+
+  &__form-wrapper {
+    display: flex;
+    max-width: 306px;
+    width: 100%;
+  }
+
+  &__input {
+    width: 59%;
+    padding: 12px;
+
+    &::placeholder {
+      line-height: 1.1;
+      color: #4F4F4F;
+    }
+  }
+
+  &__btn {
+    width: 41%;
+    padding: 12px 16px;
+    background-color: $green-900;
+    @extend %opensans-700;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  &__menu {
+    column-count: 3;
+    column-gap: 75px;
+    max-height: 115px;
+    margin-right: auto;
+  }
+
+  &__item {
+    width: 100%;
+    margin-bottom: 18px;
+  }
+
+  &__link {
+    color: #fff;
+  }
+
+  &__tel {
+    display: block;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  &__address {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &__address-link {
+    color: #fff;
+  }
+
+  &__social {
+    display: flex;
+  }
+
+  &__social-item{
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__icon {
+    border-radius: 3px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+    
+  }
+
+  &__social-link {
+
+    &:focus {
+      .footer__icon {
+        outline: 2px solid $green-200;
+      }
+    }
+
+
+  //не получилось разобраться с эффектом active на свг иконку из спрайта
+
+
+    &:active {
+      .footer__icon {
+        outline: transparent;
+        fill:green !important;
+        g{
+          path{
+            fill: $green-200;
+          }
+        }
+      }   
+    }
+  }
+
+  &__bottom {
+    padding: 30px 0;
+    background-color: $dark-800;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__copyright {
+    color: #fff;
+  }
+
+  &__pay {
+    display: flex;
+  }
+
+  &__pay-system:not(:last-child) {
+    margin-right: 25px;
+  }
+}
+

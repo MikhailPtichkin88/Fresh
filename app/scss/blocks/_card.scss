@@ -1,0 +1,94 @@
+.card {
+  position: relative;
+  display: flex;
+  width: calc(25% - 15px);
+  max-width: 300px;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid $silver-600;
+  background-color: #fff;
+
+  &__picture {
+    width: calc(35% + 15px);
+    margin-right: 12px;
+    object-fit: cover;
+    font-size: 0;
+  }
+
+  &__new,
+  &__hit {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+  }
+
+  &__info {
+    width: 65%;
+    line-height: 1;
+    letter-spacing: 0.03em;
+  }
+
+  &__descr {
+    margin-bottom: 5px;
+    padding: 0;
+    line-height: 1.4;
+  }
+
+  &__quantity {
+    margin-bottom: 5px;
+    @extend %opensans-600;
+    font-size: 10px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    color: $green-900;
+  }
+
+  &__quantity--low {
+    color: $red-900;
+  }
+
+  &__quantity--empty {
+    color: $silver-600;
+  }
+
+  &__buy {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__new-price {
+    margin-right: 12px;
+    font-size: 20px;
+
+    span {
+      font-size: 14px;
+    }
+  }
+
+  &__old-price {
+    margin-right: auto;
+    font-size: 12px;
+    margin-bottom: 0;
+
+    &:after {
+      width: 100%;
+      transform: matrix(0.99, -0.17, -0.13, -0.99, 0, 0);
+    }
+  }
+
+  &__rating {
+    position: relative;
+    padding-right: 18px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 16px;
+      height: 16px;
+      background-image: url('../images/cards/star.svg');
+    }
+  }
+}

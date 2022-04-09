@@ -1,0 +1,49 @@
+.benefits {
+  padding: 50px 0 30px;
+  background-color: #F6F6F6;
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__box{
+    &:not(:last-child) {
+    margin-right: 65px;
+    }
+  }
+  &__box {
+    flex: 1 0;
+    position: relative;
+    padding-left: 75px;
+    max-width: 260px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 50px;
+    }
+  
+    &--delivery {
+      &:before {
+        height: 45px;
+        background-image: url('../images/benefits/delivery.svg');
+      }
+    }
+
+    &--return {
+      &:before {
+        background-image: url('../images/benefits/return.svg');
+      }
+    }
+
+    &--support {
+      &:before {
+        background-image: url('../images/benefits/24hours.svg');
+      }
+    }
+  }
+}

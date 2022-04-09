@@ -1,0 +1,39 @@
+.partners {
+  padding: 70px 0 65px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__item {
+    min-height: 65px;
+  }
+
+  &__link {
+    display: block;
+    height: 65px;
+
+// тоже не получилось реализавать opacity при наведении на свг из спрайта
+// пробовал разные пути symbol, path, добавлял !important, чтобы перебить инлайн стиль, не помогает
+// до спрайта все работало нормально
+
+    &:hover {
+      .partners__logo { 
+        .g {
+          opacity: 1;
+        }     
+      }
+    }
+  }
+
+  &__logo {
+    height: 100%;
+    display: block;
+    margin: auto;
+
+    g {
+      transition: opacity 0.5s ease;
+    }
+  }
+}
