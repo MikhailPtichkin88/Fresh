@@ -1,5 +1,38 @@
 $(function () {
 $('.special-offer__slider').slick();
+$('.partners__wrapper').slick({
+  infinite: true,
+  slidesToShow: 6,
+  slidesToScroll: 5,
+  dots: false,
+  arrows: false
+});
+
+//выпадающее меню
+$('.dropdown__title, .dropdown__btn').on('click', function() {
+  $('.dropdown__btn').toggleClass('dropdown__btn--active');
+  $('.dropdown__menu').toggleClass('dropdown__menu--active');
+});
+
+$('.dropdown__link').on('click', function() {
+  $('.dropdown__btn').removeClass('dropdown__btn--active');
+  $('.dropdown__menu').removeClass('dropdown__menu--active');
+});
+
+
+
+// cart menu + overlay
+$('.user-nav__link--cart').on('click', function() {
+  $('.cart-menu').toggleClass('cart-menu--active');
+  $('.overlay').toggleClass('overlay--active');
+  $('body').css('overflow', 'hidden');
+})
+
+$('.cart-menu__close, .overlay').on('click', function() {
+  $('.cart-menu').removeClass('cart-menu--active');
+  $('.overlay').removeClass('overlay--active');
+  $('body').css('overflow', 'auto');
+})
 
 //перенос кнопок слайдера в другой блок для позиционирования
 $('.special-offer__wrapper').append($('.slick-arrow'));

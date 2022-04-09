@@ -17,6 +17,12 @@ textarea {
 	outline: transparent;
 }
 
+button{
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
 .wrapper {
 	display: flex;
 	flex-direction: column;
@@ -32,7 +38,7 @@ textarea {
 }
 
 .container {
-	width: 1320px;
+	max-width: 1320px;
 	margin: 0 auto;
 	padding: 0 15px;
 }
@@ -69,6 +75,7 @@ section{
 }
 
 .btn {
+	display: inline-block;
 	padding: 10px 24px;
 	border: none;
 	border-radius: 6px;
@@ -164,4 +171,41 @@ section{
 		background-color: rgba(255, 255, 255, 0.8);
 		background-image: url('../images/slider/right-green.svg');
 	}
+}
+
+.counter {
+  display: flex;
+
+  &__btn {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background-color: $green-900;
+    @extend %bg-img-auto;
+    cursor: pointer;
+  }
+
+  &__btn--plus {
+    background-image: url('../images/icons/plus.svg');
+    border-radius: 0 3px 3px 0;
+  }
+
+  &__btn--minus {
+    background-image: url('../images/icons/minus.svg');
+    border-radius: 3px 0 0 3px;
+  }
+
+  &__num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 24px;
+    background-color: $green-200;
+  }
+}
+
+.hidden{
+	display: none;
 }
