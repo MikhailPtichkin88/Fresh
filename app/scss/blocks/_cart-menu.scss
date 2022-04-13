@@ -145,4 +145,8 @@
   &--active {
     transform: translateX(0);
   }
+
+  @include r(556){
+    width: 100%;
+  }
 }

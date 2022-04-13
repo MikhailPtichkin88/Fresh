@@ -1,8 +1,21 @@
 .user-nav {
   display: flex;
 
-  &__item:not(:last-child) {
-    margin-right: 12px;
+  &__item {
+
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+
+    @include r(991) {
+      &:not(:last-child) {
+        margin-right: 0px;
+      }
+
+      &:nth-child(2) {
+        display: none;
+      }
+    }
   }
 
   &__link {
@@ -20,7 +33,7 @@
 
     &:focus {
       border: 1px solid #fff;
-      box-shadow: inset 0px 0px 0px 3px $green-100;
+      box-shadow: inset 0px 0px 0px 1px $green-100;
       outline: transparent;
     }
 
@@ -30,11 +43,16 @@
       box-shadow: none;
       outline: transparent;
     }
- 
-    &--search{
+
+    &--search {
       display: none;
+
+      @include r(820) {
+        display: block;
+        background-image: url('../images/icons/search-white.svg');
+      }
     }
-    
+
     &--user {
       background-image: url('../images/icons/user.svg');
     }
@@ -45,6 +63,10 @@
 
     &--cart {
       background-image: url('../images/icons/cart.svg');
+    }
+
+    @include r(556) {
+      background-size: 25px 25px;
     }
   }
 
@@ -64,5 +86,10 @@
     letter-spacing: 0.03em;
     border-radius: 50%;
     text-align: center;
+  }
+
+  @include r(556) {
+    top: 7px;
+    left: 7px;
   }
 }

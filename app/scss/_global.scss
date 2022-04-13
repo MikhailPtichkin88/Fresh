@@ -75,11 +75,12 @@ section{
 
 .btn {
 	display: inline-block;
-	padding: 10px 24px;
+	padding: 15px 24px;
 	border: none;
 	border-radius: 6px;
 	color: #fff;
 	font-size: 18px;
+	line-height: 1;
 	background-color: $green-900;
 	@extend %transition;
 
@@ -93,6 +94,11 @@ section{
 
 	&:active {
 		color: rgba(255, 255, 255, 0.5);
+	}
+
+	@include r(1200) {
+		padding: 5px 5px;
+		font-size: 16px;
 	}
 }
 
@@ -113,64 +119,13 @@ section{
 	}
 }
 
-.input-btn {
-	border-radius: 0;
-	border-top-right-radius: 6px;
-	border-bottom-right-radius: 6px;
-}
-
-.slick-prev,
-.slick-next {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	width: 60px;
-	height: 60px;
-	font-size: 0;
-	border: none;
-	border-radius: 6px;
-	background-color: rgba(255, 255, 255, 0.8);
-	@extend %bg-img-auto;
-	@extend %transition;
-	z-index: 1;
-
-	&:hover {
-		background-color: $green-200;
+	.input-btn {
+		border-radius: 0;
+		border-top-right-radius: 6px;
+		border-bottom-right-radius: 6px;
 	}
 
-	&:focus {
-		border: 1px solid $green-900;
-	}
-}
 
-.slick-prev {
-	left: -255px;
-	background-image: url('../images/slider/arrow-left.svg');
-
-	&:hover {
-		background-image: url('../images/slider/left-green.svg');
-	}
-
-	&:active {
-		background-color: rgba(255, 255, 255, 0.8);
-		background-image: url('../images/slider/left-green.svg');
-	}
-}
-
-.slick-next {
-	right: -255px;
-	background-image: url('../images/slider/arrow-right.svg');
-
-	&:hover {
-		background-image: url('../images/slider/right-green.svg');
-	}
-
-	&:active {
-		border: none;
-		background-color: rgba(255, 255, 255, 0.8);
-		background-image: url('../images/slider/right-green.svg');
-	}
-}
 
 .counter {
   display: flex;
@@ -183,16 +138,16 @@ section{
     background-color: $green-900;
     @extend %bg-img-auto;
     cursor: pointer;
-  }
 
-  &__btn--plus {
-    background-image: url('../images/icons/plus.svg');
-    border-radius: 0 3px 3px 0;
-  }
+		&--plus {
+			background-image: url('../images/icons/plus.svg');
+			border-radius: 0 3px 3px 0;
+		}
 
-  &__btn--minus {
-    background-image: url('../images/icons/minus.svg');
-    border-radius: 3px 0 0 3px;
+		&--minus {
+			background-image: url('../images/icons/minus.svg');
+			border-radius: 3px 0 0 3px;
+		}
   }
 
   &__num {
@@ -208,3 +163,4 @@ section{
 .hidden{
 	display: none;
 }
+

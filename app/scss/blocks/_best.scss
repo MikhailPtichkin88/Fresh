@@ -3,17 +3,43 @@
 
   &__title {
     margin-bottom: 30px;
+
+    @include r(556) {
+      font-size: 24px;
+      margin-bottom: 25px;
+    }
   }
 
   &__btns {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
+    flex-wrap: wrap;
+
+    @include r(556) {
+      margin: 0 auto;
+      margin-bottom: 10px;
+      max-width: 300px;
+      flex-wrap: wrap;
+    }
   }
 
-  &__btn-box:not(:last-child) {
-    margin-right: 24px;
+  &__btn-box {
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+
+    @include r(556) {
+      margin-right: 30px;
+      margin-bottom: 10px;
+
+      &:nth-child(3),
+      &:nth-child(5) {
+        margin-right: 0;
+      }
+    }
   }
+
 
   &__btn {
     position: relative;
@@ -42,6 +68,10 @@
         width: 100%;
       }
     }
+
+    @include r(556) {
+      font-size: 14px;
+    }
   }
 
   &__products {
@@ -49,11 +79,45 @@
     flex-wrap: wrap;
     gap: 30px;
     margin-bottom: 45px;
+
+    @include r(1368) {
+      justify-content: center;
+    }
+
+    @include r(1010) {
+      justify-content: center;
+      gap: 25px;
+    }
+
+    @include r(556) {
+      gap: 5px;
+      margin-bottom: 20px;
+
+      li:last-child {
+        .product__descr {
+          min-height: 60px;
+        }
+      }
+    }
   }
 
   &__show-more {
     display: block;
     margin: 0 auto;
     cursor: pointer;
+
+    @include r(1368) {
+      padding: 15px 20px;
+    }
+  }
+
+  @include r(1010) {
+    padding: 50px 0;
+  }
+
+  @include r(556) {
+    font-size: 17px;
+    letter-spacing: 0.03em;
+    padding: 28px 0;
   }
 }

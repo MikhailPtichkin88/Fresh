@@ -4,6 +4,68 @@
   &__wrapper {
     display: flex;
     gap: 30px;
+
+    @include r(1110) {
+      font-size: 20px;
+    }
+
+    @include r(991) {
+      flex-wrap: wrap;
+    }
+
+    @include r(556) {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+
+  &__descr {
+    max-width: 80%;
+    @extend %opensans-700;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    @include line-clamp(1);
+
+    @include r(556) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__title {
+    max-width: 160px;
+    margin-bottom: 12px;
+    font-size: 30px;
+    text-align: left;
+    color: $dark-500;
+    letter-spacing: normal;
+    @include line-clamp(2);
+
+    @include r(556){
+      font-size: 24px;
+      margin-bottom: 70px;
+    }
+  }
+
+  &__link {
+    @extend %opensans-700;
+    font-size: 14px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $dark-500;
+    border-bottom: 2px solid $dark-500;
+    @include line-clamp(1);
+
+    @include r(556){
+      @extend %opensans-700;
+      font-size: 14px;
+      line-height: 1;
+      text-transform: uppercase;
+      color: $dark-500;
+      border-bottom: 2px solid $dark-500;
+    }
   }
 
   &__banner {
@@ -14,10 +76,26 @@
 
     &--veg {
       background-image: url('../images/banners/veg.jpg');
+
+      @include r(991) {
+        width: calc(50% - 15px);
+      }
+
+      @include r(556) {
+        width: 100%;
+      }
     }
 
     &--bread {
       background-image: url('../images/banners/bread.jpg');
+
+      @include r(991) {
+        width: calc(50% - 15px);
+      }
+      
+      @include r(556) {
+        width: 100%;
+      }
     }
 
     &--big {
@@ -27,7 +105,7 @@
       text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
 
       .banners__title {
-        width: 360px;
+        max-width: 360px;
         color: #fff;
       }
 
@@ -35,32 +113,30 @@
         color: #fff;
         border-color: #fff;
       }
+
+      @include r(991) {
+        width: 100%;
+      }
+      @include r(556){
+        .banners__title {
+          width: 250px;
+        }
+      }
+    }
+
+    @include r(1100) {
+      padding: 45px 32px;
+    }
+
+    @include r(556) {
+      padding: 80px 15px 30px;
     }
   }
 
-  &__descr {
-    @extend %opensans-700;
-    font-size: 12px;
-    line-height: 1;
-    letter-spacing: 0.1em;
-    margin-bottom: 20px;
-  }
-
-  &__title {
-    width: 125px;
-    margin-bottom: 12px;
-    font-size: 30px;
-    text-align: left;
-    color: $dark-500;
-    letter-spacing: normal;
-  }
-
-  &__link {
-    @extend %opensans-700;
-    font-size: 14px;
-    line-height: 1;
-    text-transform: uppercase;
-    color: $dark-500;
-    border-bottom: 2px solid $dark-500;
+  @include r(556) {
+    padding: 25px 0 20px;
   }
 }
+
+
+  

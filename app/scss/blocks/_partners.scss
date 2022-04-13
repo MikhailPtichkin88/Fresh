@@ -10,19 +10,19 @@
     min-height: 65px;
   }
 
+  &__svg {
+    path {
+      opacity: inherit;
+    }
+  }
+
   &__link {
     display: block;
     height: 65px;
 
-// тоже не получилось реализавать opacity при наведении на свг из спрайта
-// пробовал разные пути symbol, path, добавлял !important, чтобы перебить инлайн стиль, не помогает
-// до спрайта все работало нормально
-
     &:hover {
-      .partners__logo { 
-        .g {
-          opacity: 1;
-        }     
+      .partners__logo {
+        opacity: 1;
       }
     }
   }
@@ -31,9 +31,11 @@
     height: 100%;
     display: block;
     margin: auto;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+  }
 
-    g {
-      transition: opacity 0.5s ease;
-    }
+  @include r(556){
+    padding: 40px 0;
   }
 }

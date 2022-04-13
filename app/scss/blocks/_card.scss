@@ -26,12 +26,19 @@
     width: 65%;
     line-height: 1;
     letter-spacing: 0.03em;
+
+    @include r(1378){
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
   }
 
   &__descr {
     margin-bottom: 5px;
     padding: 0;
     line-height: 1.4;
+    @include line-clamp(3);
   }
 
   &__quantity {
@@ -41,6 +48,11 @@
     line-height: 1;
     letter-spacing: 0.03em;
     color: $green-900;
+    text-transform: uppercase;
+
+    @include r(1378){
+    margin-bottom: auto;
+    }
   }
 
   &__quantity--low {
@@ -91,4 +103,8 @@
       background-image: url('../images/cards/star.svg');
     }
   }
+    @include r(1378){
+      width: 300px;
+    }
 }
+

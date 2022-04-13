@@ -13,13 +13,13 @@
           </li>
           <li class="menu__item-left">
             <a class="menu__link menu__link--left menu__link--adress" href="#">
-              АДРЕС И ВРЕМЯ ДОСТАВКИ
+              адрес и время доставки
             </a>
           </li>
           <li class="menu__item-left">
             <a class="menu__link menu__link--left
             menu__link--tel" href="#">
-              ГОРЯЧАЯ ЛИНИЯ 24/7
+              горячая линия 24/7
             </a>
           </li>
         </ul>
@@ -27,17 +27,17 @@
         <ul class="menu__list">
           <li class="menu__item">
             <a class="menu__link" href="#">
-              ДОСТАВКА
+              доставка
             </a>
           </li>
           <li class="menu__item">
             <a class="menu__link" href="#">
-              О НАС
+              о нас
             </a>
           </li>
           <li class="menu__item">
             <a class="menu__link" href="#">
-              НОВОСТИ
+              новости
             </a>
           </li>
         </ul>
@@ -48,11 +48,14 @@
   <nav class="header__bottom">
     <div class="container">
       <div class="header__wrapper">
+
+      @@include('blocks/aside.html')
+
         <a class="logo" href="#">
           <picture>
-            <source media="(max-width: 767px)" srcset="@@webRoot/images/icons/logo-short.svg">
-            <source media="(min-width: 768px)" srcset="@@webRoot/images/logo.svg">
-            <img class="logo__img" src="@@webRoot/images/logo.svg" alt="site logo" style="width: 200; height: 60;">
+            <source media="(max-width: 820px)" srcset="@@webRoot/images/icons/logo-short.svg">
+            <source media="(min-width: 821px)" srcset="@@webRoot/images/logo.svg">
+            <img class="logo__img" src="@@webRoot/images/logo.svg" alt="site logo" width="200" height="60">
           </picture>
         </a>
 
@@ -64,9 +67,9 @@
           </li>
 
           <li class="dropdown__title">
-            <a class="dropdown__title-link" href="#">
+            <button class="dropdown__title-link" type="button">
               Каталог продуктов
-            </a>
+            </button>
 
             <ul class="dropdown__menu">   
               <li class="dropdown__item">
@@ -138,7 +141,9 @@
           </label>
           <input class="input header__input" id="search" type="search" name="search"
             placeholder="Найти в магазине ..." required>
-          <button class="header__icon-btn" type="submit"><span class="sr-only">search button icon</span></button>
+          <button class="header__icon-btn" type="submit">
+            <span class="sr-only">search button icon</span>
+          </button>
           <button class="btn input-btn header__btn" type="submit">поиск</button>
         </form>
 
@@ -180,7 +185,7 @@
             <ul class="cart-menu__main">
 
               <li class="cart-menu__item">
-                <img class="cart-menu__img" style="width: 60; height: 60;" src="@@webRoot/images/cart-menu/pineapple.jpg" alt="pineaple">
+                <img class="cart-menu__img" width="60" height="60" src="@@webRoot/images/cart-menu/pineapple.jpg" alt="pineaple">
 
                 <div class="cart-menu__info">
                   <p class="cart-menu__descr">Ананас, 1 кг</p>
@@ -204,7 +209,7 @@
               </li>
 
               <li class="cart-menu__item">
-                <img class="cart-menu__img" src="@@webRoot/images/best-products/dragon-fruit.jpg" style="width: 60; height: 60; object-fit: contain;" alt="dragon-fruit">
+                <img class="cart-menu__img" src="@@webRoot/images/best-products/dragon-fruit.jpg" width="60" height="60" style="object-fit: contain;" alt="dragon-fruit">
 
                 <div class="cart-menu__info">
                   <p class="cart-menu__descr">Питахайя красная с белой мякотью, 1шт</p>
@@ -256,5 +261,15 @@
  
       </div>
     </div>
- 
+    <form class="header__search header__search--mobile" action="#">
+      <label for="popup-search" class="header__label">
+        <span class="sr-only">форма для поиска</span>
+      </label>
+      <input class="input header__input" id="popup-search" type="search" name="popup-search"
+        placeholder="Я ищу..." required>
+      <button class="header__icon-btn" type="submit"><span class="sr-only">search button icon</span></button>
+      <button class="btn input-btn header__btn" type="submit">поиск</button>
+    </form>
+  </nav>
+
 </header>

@@ -2,14 +2,28 @@
   padding: 75px 0 70px;
   background-color: #F5F5F5;
 
+  @include r(1378) {
+    padding: 55px 0;
+  }
+
   &__products {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     margin-bottom: 50px;
+
+    @include r(1378) {
+      justify-content: center;
+      margin-bottom: 20px;
+      gap: 14px;
+    }
   }
 
   &__title {
     margin-bottom: 32px;
+
+    @include r(1378) {
+      margin-bottom: 25px;
+    }
   }
 }
