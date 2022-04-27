@@ -1,4 +1,68 @@
 $(function () {
+
+  var $range = $(".js-range-slider"),
+    $inputFrom = $(".js-input-from"),
+    $inputTo = $(".js-input-to"),
+    instance,
+    min = 0,
+    max = 1100,
+    from = 0,
+    to = 0;
+
+  $(".js-range-slider").ionRangeSlider({
+    type: "double",
+    min: min,
+    max: max,
+    from: 100,
+    to: 1000,
+    onStart: updateInputs,
+    onChange: updateInputs,
+    hide_min_max: true,
+    hide_from_to: true,
+  });
+
+  instance = $range.data("ionRangeSlider");
+
+  function updateInputs(data) {
+    from = data.from;
+    to = data.to;
+
+    $inputFrom.prop("value", from);
+    $inputTo.prop("value", to);
+  }
+
+  $inputFrom.on("input", function () {
+    var val = $(this).prop("value");
+
+    // validate
+    if (val < min) {
+      val = min;
+    } else if (val > to) {
+      val = to;
+    }
+
+    instance.update({
+      from: val
+    });
+  });
+
+  $inputTo.on("input", function () {
+    var val = $(this).prop("value");
+
+    // validate
+    if (val < from) {
+      val = from;
+    } else if (val > max) {
+      val = max;
+    }
+
+    instance.update({
+      to: val
+    });
+  });
+
+
+
   $('.special-offer__slider').slick({
     prevArrow: '<div class="prev"></div>',
     nextArrow: '<div class="next"></div>',
@@ -35,19 +99,54 @@ $(function () {
       {
         breakpoint: 557,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 2,
-        }
-      },
-      {
-        breakpoint: 375,
-        settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
         }
-      }
+      },
     ]
   });
+
+  //focus
+  $('.select-styled').attr('tabindex', '0');
+
+  //catalog page view change
+
+  $('.content__btn').on('click', function (e) {
+
+    if (!$(e.currentTarget).hasClass('content__btn-hide')) {
+      $('.content__btn').each(function () {
+        $(this).removeClass('content__btn--active')
+      })
+    }
+
+    if (!$(e.currentTarget).hasClass('content__btn-hide')) {
+      $(this).addClass('content__btn--active')
+    }
+
+    if ($(e.currentTarget).hasClass('content__btn-blocks')) {
+      $('.content__lines').removeClass('content__lines--active')
+      $('.content__blocks').addClass('content__blocks--active')
+    }
+
+    if ($(e.currentTarget).hasClass('content__btn-lines')) {
+      $('.content__blocks').removeClass('content__blocks--active')
+      $('.content__lines').addClass('content__lines--active')
+    }
+  })
+
+// adaptive aside filters
+  $('.content__btn-hide').on('click', function () {
+    $('.aside-filters').toggleClass('aside-filters--active')
+    $('.overlay').toggleClass('overlay--active');
+    $('body').css('overflow', 'hidden');
+  })
+
+  $('.aside-filters__close, .overlay').on('click', function () {
+    $('.aside-filters').removeClass('aside-filters--active')
+    $('.overlay').removeClass('overlay--active');
+    $('body').css('overflow', 'auto');
+  })
+
 
   //выпадающее меню
   $('.dropdown__title, .dropdown__btn').on('click', function () {
@@ -62,25 +161,30 @@ $(function () {
     $('.dropdown__title').removeClass('dropdown__title--active');
   });
 
-  $(document).on('mouseup scroll', function(e){
+  $(document).on('mouseup scroll', function (e) {
     let div = $('.dropdown');
-    if(!div.is(e.target) && div.has(e.target).length === 0){
+    if (!div.is(e.target) && div.has(e.target).length === 0) {
       $('.dropdown__btn').removeClass('dropdown__btn--active');
       $('.dropdown__menu').removeClass('dropdown__menu--active');
       $('.dropdown__title').removeClass('dropdown__title--active');
     }
   })
 
+  $('.aside-filters__title-btn').on('click', function (e) {
+    $(e.currentTarget).parent().find('.aside-filters__title-btn').toggleClass('aside-filters__title-btn--active');
+    $(e.currentTarget).parent().find('.aside-filters__menu').toggleClass('aside-filters__menu--active');
+  });
+
   //выпадающий поиск при адаптиве
   $('.user-nav__link--search').on('click', function () {
     $('.header__search--mobile').toggleClass('header__search--active');
   });
 
-  $(document).on('mouseup scroll', function(e){
+  $(document).on('mouseup scroll', function (e) {
     let div = $('.user-nav__link--search');
     let div1 = $('.header__search--mobile');
-    if(!div.is(e.target) && !div1.is(e.target) 
-    && div.has(e.target).length === 0 && div1.has(e.target).length === 0){
+    if (!div.is(e.target) && !div1.is(e.target) &&
+      div.has(e.target).length === 0 && div1.has(e.target).length === 0) {
       $('.header__search').removeClass('header__search--active');
     }
   })

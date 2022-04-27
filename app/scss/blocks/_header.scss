@@ -15,12 +15,12 @@
     min-height: 110px;
     z-index: 20;
 
-    @include r(820) {
+    @include r(768) {
       min-height: 80px;
       align-items: center;
     }
 
-    @include r(556) {
+    @include r(576) {
       min-height: 60px;
     }
   }
@@ -55,7 +55,7 @@
       }
     }
 
-    @include r(820) {
+    @include r(768) {
       display: none;
     }
 
@@ -63,7 +63,7 @@
     &--mobile {
       display: none;
 
-      @include r(820) {
+      @include r(768) {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -116,7 +116,7 @@
       left: 10px;
     }
 
-    @include r(820) {
+    @include r(768) {
       display: block;
       left: 0;
     }
@@ -148,7 +148,7 @@
       }
     }
 
-    @include r(820) {
+    @include r(768) {
       display: block;
       width: 70%;
       margin: 0;
@@ -181,7 +181,7 @@
       display: none;
     }
 
-    @include r(820) {
+    @include r(768) {
       display: block;
       width: 30%;
       border-radius: 0;
@@ -197,7 +197,7 @@
 }
 
 
-@media (max-width: 820px) {
+@media (max-width: 768px) {
 
   .logo {
     width: 37px;

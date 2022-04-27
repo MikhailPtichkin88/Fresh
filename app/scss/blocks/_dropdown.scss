@@ -63,7 +63,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    z-index: 5;
+    z-index: 15;
     transform-origin: 0 0;
     transform: scaleY(0);
     transition: transform 0.3s;
@@ -113,7 +113,7 @@
     }
   }
 
-  @include r(556) {
+  @include r(576) {
     display: none;
   }
 }

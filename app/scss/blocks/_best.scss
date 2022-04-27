@@ -4,9 +4,9 @@
   &__title {
     margin-bottom: 30px;
 
-    @include r(556) {
+    @include r(576) {
       font-size: 24px;
-      margin-bottom: 25px;
+      margin-bottom: 15px;
     }
   }
 
@@ -16,7 +16,7 @@
     margin-bottom: 50px;
     flex-wrap: wrap;
 
-    @include r(556) {
+    @include r(576) {
       margin: 0 auto;
       margin-bottom: 10px;
       max-width: 300px;
@@ -29,7 +29,7 @@
       margin-right: 24px;
     }
 
-    @include r(556) {
+    @include r(576) {
       margin-right: 30px;
       margin-bottom: 10px;
 
@@ -69,7 +69,7 @@
       }
     }
 
-    @include r(556) {
+    @include r(576) {
       font-size: 14px;
     }
   }
@@ -80,16 +80,16 @@
     gap: 30px;
     margin-bottom: 45px;
 
-    @include r(1368) {
+    @include r(1378) {
       justify-content: center;
     }
 
-    @include r(1010) {
+    @include r(1200) {
       justify-content: center;
       gap: 25px;
     }
 
-    @include r(556) {
+    @include r(576) {
       gap: 5px;
       margin-bottom: 20px;
 
@@ -111,13 +111,13 @@
     }
   }
 
-  @include r(1010) {
+  @include r(1200) {
     padding: 50px 0;
   }
 
-  @include r(556) {
+  @include r(576) {
     font-size: 17px;
     letter-spacing: 0.03em;
-    padding: 28px 0;
+    padding: 60px 0 30px;
   }
 }

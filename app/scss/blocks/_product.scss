@@ -1,8 +1,19 @@
 .product {
+  position: relative;
   max-width: 300px;
   border: 1px solid rgba(17, 17, 17, 0.2);
   border-radius: 6px;
   padding: 12px 12px 18px;
+
+  @include r(991) {
+    max-width: 220px;
+    padding: 10px;
+    min-height: 100%;
+  }
+
+  @include r(576) {
+    max-width: 170px;
+  }
 
   &__info {
     display: flex;
@@ -16,6 +27,24 @@
     li {
       &:not(:last-child) {
         margin-bottom: 10px;
+      }
+    }
+
+    &-catalog {
+      li {
+        &:not(:last-child) {
+          margin-bottom: 5px;
+        }
+      }
+
+      @include r(1378) {
+        min-height: 0;
+      }
+    }
+
+    @include r(576) {
+      div:not(:last-child) {
+        margin-bottom: 5px;
       }
     }
   }
@@ -46,6 +75,11 @@
 
   &__heart {
     fill: $silver-600;
+
+    @include r(576) {
+      width: 25px;
+      height: 21px;
+    }
   }
 
   &__favorite {
@@ -76,6 +110,19 @@
         fill: rgba($yellow-900, 0.5);
       }
     }
+
+    &-catalog {
+      position: absolute;
+      top: 8px;
+      right: 4px;
+
+    }
+
+    @include r(576) {
+      width: 30px;
+      height: 30px;
+    }
+
   }
 
   &__favorite.product__favorite--active {
@@ -124,6 +171,22 @@
         z-index: 3;
       }
     }
+
+    @include r(991) {
+      min-width: 100%;
+
+      &::before {
+        min-width: 100%;
+        transform: translate(0);
+      }
+    }
+
+    @include r(576) {
+      &::before {
+        min-width: 115%;
+        transform: translate(-10px);
+      }
+    }
   }
 
   &__img {
@@ -134,6 +197,21 @@
     object-fit: cover;
     margin-bottom: 10px;
     z-index: 1;
+
+    @include r(991) {
+      height: 125px;
+      min-height: 125px;
+      max-width: 215px;
+      transform: translate(-7px);
+    }
+
+    @include r(576) {
+      margin: 0 auto;
+      width: 100%;
+      max-height: 180px;
+      transform: translate(0);
+      margin-bottom: 10px;
+    }
   }
 
   &__descr {
@@ -146,18 +224,41 @@
     color: $dark-900;
     letter-spacing: 0.03em;
     @include line-clamp(3);
+
+    @include r(991) {
+      max-width: 100%;
+      max-height: 95px;
+      word-break: break-all;
+      overflow: auto;
+    }
+
+    @include r(576) {
+      min-height: 20px;
+      max-height: 60px;
+      word-break: normal;
+      overflow: hidden;
+      margin-bottom: 52px;
+    }
   }
 
   &__buy {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include r(991) {
+      align-items: flex-end;
+    }
   }
 
   &__price {
     line-height: 1;
     letter-spacing: 0.03em;
     padding-left: 10px;
+
+    @include r(991) {
+      padding-left: 0;
+    }
   }
 
   &__old-price {
@@ -180,7 +281,6 @@
   &__counter {
     margin-right: 24px;
     margin-left: auto;
-
   }
 
   &__purchase {
@@ -201,94 +301,128 @@
   }
 }
 
+// карточки товаров в виде линий (страница каталога)
+.product {
 
-@media (max-width: 1010px) {
+  &--line {
+    position: relative;
+    max-width: 466px;
+    max-height: 162px;
+    padding: 10px 18px 10px 0;
 
-  .product {
-    max-width: 220px;
-    padding: 10px;
-    min-height: 100%;
-
-    &__img {
-      margin: 0 auto;
-      width: 100%;
-      min-height: 150px;
-      max-height: 180px;
-      transform: translate(0);
-      margin-bottom: 10px;
+    @include r(1378) {
+      padding: 5px 5px 5px 0;
+      max-width: 350px;
+      max-height: 150px;
     }
 
-    &__overlay {
-      min-width: 100%;
-
-      &:before {
-        min-width: 100%;
-        transform: translate(0);
-      }
-    }
-
-    &__descr {
+    @include r(991) {
       max-width: 100%;
-      max-height: 95px;
-      word-break: break-all;
-      overflow: auto;
+      max-height: 150px;
     }
 
-    &__buy {
-      align-items: flex-end;
+    .content__rating {
+      transform: translateY(0);
     }
 
-    &__price {
-      padding-left: 0;
-    }
-  }
-}
-
-@media (max-width: 556px) {
-
-  .product {
-    max-width: 170px;
-    max-height: 345px;
-
-    &__img {
-      height: 125px;
-      min-height: 125px;
+    .product__info {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      z-index: 5;
     }
 
-    &__overlay {
-      min-width: 100%;
-
-      &:before {
-        min-width: 115%;
-        transform: translate(-10px);
-      }
-    }
-
-    &__descr {
-      min-height: 20px;
-      max-height: 60px;
-      word-break: normal;
-      overflow: hidden;
-      margin-bottom: 52px;
-      // text-overflow: ellipsis;
-    }
-
-    &__heart {
-      width: 25px;
-      height: 21px;
-    }
-
-    &__favorite {
-      width: 30px;
-      height: 30px;
-    }
-
-    &__offer div:not(:last-child) {
+    .product__offer li:not(:last-child) {
       margin-bottom: 5px;
     }
 
-    .counter {
-      display: none;
+    .product__wrapper {
+      display: flex;
+    }
+
+    .product__inner {
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include r(991) {
+        width: 100%;
+      }
+    }
+
+    .product__img {
+      max-width: 200px;
+      max-height: 142px;
+      transform: translateX(0);
+
+      @include r(1378) {
+        max-width: 85px;
+      }
+
+      @include r(991) {
+        max-width: 130px;
+        min-height: initial;
+        max-height: 130px;
+      }
+    }
+
+    .product__favorite {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 18px;
+    }
+
+    .product__overlay {
+      margin-right: 18px;
+
+      &:before {
+        min-width: 200px;
+        transform: translateX(0);
+      }
+
+      @include r(1378) {
+        margin-right: 10px;
+
+        &::before {
+          min-width: initial;
+          max-width: 85px;
+        }
+      }
+
+      @include r(991) {
+        min-width: initial;
+
+        &::before {
+          min-width: initial;
+          max-width: 130px;
+        }
+      }
+    }
+
+    .product__descr {
+      max-width: 171px;
+      padding-left: 0;
+
+      @include r(991) {
+        max-width: 80%;
+        min-height: 20px;
+      }
+    }
+
+    .product__buy {
+      width: 230px;
+      margin-bottom: 5px;
+
+      @include r(991) {
+        width: 100%;
+      }
+    }
+
+    .product__price {
+      &-line {
+        padding-left: 0;
+      }
     }
   }
 }

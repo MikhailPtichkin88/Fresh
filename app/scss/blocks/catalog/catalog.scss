@@ -1,0 +1,30 @@
+.catalog {
+  padding: 40px 0 70px;
+
+  @include r(991) {
+    padding-bottom: 50px;
+  }
+
+  @include r(576) {
+    padding: 30px 0 40px;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    letter-spacing: 0.04em;
+    @extend %ruda-700;
+    font-size: 42px;
+    line-height: 1.2;
+    text-transform: none;
+
+    @include r(576) {
+      font-size: 30px;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+}

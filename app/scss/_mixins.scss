@@ -4,6 +4,12 @@
    }
 }
 
+@mixin h($height) {
+  @media (max-height: #{$height}px) {
+    @content;
+   }
+}
+
 // .class {
 //   font-size: 30px;
 // 	@include r(768) {

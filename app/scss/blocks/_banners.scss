@@ -5,7 +5,7 @@
     display: flex;
     gap: 30px;
 
-    @include r(1110) {
+    @include r(1200) {
       font-size: 20px;
     }
 
@@ -13,7 +13,7 @@
       flex-wrap: wrap;
     }
 
-    @include r(556) {
+    @include r(576) {
       flex-wrap: wrap;
       gap: 20px;
     }
@@ -29,7 +29,7 @@
     text-transform: uppercase;
     @include line-clamp(1);
 
-    @include r(556) {
+    @include r(576) {
       margin-bottom: 15px;
     }
   }
@@ -43,7 +43,7 @@
     letter-spacing: normal;
     @include line-clamp(2);
 
-    @include r(556){
+    @include r(576){
       font-size: 24px;
       margin-bottom: 70px;
     }
@@ -58,7 +58,7 @@
     border-bottom: 2px solid $dark-500;
     @include line-clamp(1);
 
-    @include r(556){
+    @include r(576){
       @extend %opensans-700;
       font-size: 14px;
       line-height: 1;
@@ -81,7 +81,7 @@
         width: calc(50% - 15px);
       }
 
-      @include r(556) {
+      @include r(576) {
         width: 100%;
       }
     }
@@ -93,7 +93,7 @@
         width: calc(50% - 15px);
       }
       
-      @include r(556) {
+      @include r(576) {
         width: 100%;
       }
     }
@@ -117,23 +117,23 @@
       @include r(991) {
         width: 100%;
       }
-      @include r(556){
+      @include r(576){
         .banners__title {
           width: 250px;
         }
       }
     }
 
-    @include r(1100) {
+    @include r(1200) {
       padding: 45px 32px;
     }
 
-    @include r(556) {
+    @include r(576) {
       padding: 80px 15px 30px;
     }
   }
 
-  @include r(556) {
+  @include r(576) {
     padding: 25px 0 20px;
   }
 }
