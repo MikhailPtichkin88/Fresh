@@ -1,32 +1,38 @@
-@import 'fonts';
-@import 'vars';
-@import 'mixins';
-@import 'reset';
-@import 'global';
-@import 'custom-select';
-@import 'libs';
+@import 'base/fonts';
+@import 'base/vars';
+@import 'base/mixins';
+@import 'base/reset';
+@import 'base/global';
+@import 'base/custom-select';
+@import 'base/libs';
 
-@import 'blocks/header';
-@import 'blocks/menu';
-@import 'blocks/aside';
-@import 'blocks/dropdown';
-@import 'blocks/user-nav';
-@import 'blocks/cart-menu';
-@import 'blocks/overlay';
-@import 'blocks/special-offer';
-@import 'blocks/benefits';
-@import 'blocks/best';
-@import 'blocks/product';
-@import 'blocks/banners';
-@import 'blocks/promo';
-@import 'blocks/card';
-@import 'blocks/partners';
-@import 'blocks/news';
-@import 'blocks/footer';
+@import 'main/header';
+@import 'main/menu';
+@import 'main/aside';
+@import 'main/dropdown';
+@import 'main/user-nav';
+@import 'main/cart-menu';
+@import 'main/overlay';
+@import 'main/special-offer';
+@import 'main/benefits';
+@import 'main/best';
+@import 'main/product';
+@import 'main/banners';
+@import 'main/promo';
+@import 'main/card';
+@import 'main/partners';
+@import 'main/news';
+@import 'main/footer';
 
-@import 'blocks/catalog/catalog';
-@import 'blocks/catalog/aside-filters';
-@import 'blocks/catalog/content';
+@import 'catalog/catalog';
+@import 'catalog/aside-filters';
+@import 'catalog/content';
+
+@import 'product/product-page';
+@import 'product/product-tabs';
+@import 'product/comment';
+@import 'product/product-related';
+@import 'product/fancybox';
 
 
 

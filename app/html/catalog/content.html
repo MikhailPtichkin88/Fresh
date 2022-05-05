@@ -1,0 +1,53 @@
+<div class="content">
+  <div class="content__filter">
+
+    <button class="content__btn content__btn-hide">
+      <span class="sr-only">hide btn for aside filters</span>
+      <svg width="32" height="36">
+        <use  xlink:href="@@webRoot/images/catalog/sprite-btns.svg#hide-filter"></use>
+      </svg>
+    </button>
+
+    <form class="content__form" action="#">
+      <select class="content__sort-name rev-select-box">
+        <option value="">По названию</option>
+        <option value="">По популярности</option>
+        <option value="">Сначала дешевые</option>
+        <option value="">Сначала дорогие</option>
+        <option value="">По алфавиту</option>
+      </select>
+
+      <select class="content__sort-number rev-select-box">
+        <option value="">по 12</option>
+        <option value="">по 18</option>
+        <option value="">по 24</option>
+        <option value="">по 30</option>
+        <option value="">по 36</option>
+      </select>
+    </form>
+    <button class="content__btn content__btn-lines">
+      <span class="sr-only">line style items</span>
+      <span class="sr-only">square style items</span>
+      <svg class="content__sprite-line"  width="47" height="47">
+        <use  xlink:href="@@webRoot/images/catalog/sprite-btns.svg#group-line"></use>
+      </svg>
+    </button>
+
+    <button class="content__btn content__btn-blocks content__btn--active">
+      <span class="sr-only">square style items</span>
+      <svg class="content__sprite-box"  width="47" height="47">
+        <use  xlink:href="@@webRoot/images/catalog/sprite-btns.svg#group-box"></use>
+      </svg>
+    </button>
+  </div>
+
+  @@include('../catalog/inner-blocks.html')
+  @@include('../catalog/inner-lines.html')
+
+
+  <div class="content__footer">
+    <button class="btn best__show-more content__show-more" type="button">Показать еще</button>
+
+    @@include('../page/pagination.html')
+  </div>
+</div>

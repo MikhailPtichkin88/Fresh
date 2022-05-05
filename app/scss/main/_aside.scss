@@ -1,0 +1,170 @@
+.aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  width: 300px;
+  background-color: #fff;
+  border: 1px solid #EBEBEB;
+  transition: transform 0.3s;
+  z-index: 15;
+
+  &--active {
+    transform: translateX(0);
+  }
+
+  &__wrapper {
+    padding: 24px 0;
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    overflow: auto;
+
+    @include h(600){
+      height: 100vh;
+    }
+  }
+
+  &__top {
+    position: relative;
+    margin-bottom: 26px;
+  }
+
+  &__logo {
+    width: 180px;
+    height: 60px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    background-image: url('../../images/cart-menu/close-big.svg');
+    background-size: 18px 18px;
+    @extend %bg-img-auto;
+    &:hover{
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__login {
+    display: flex;
+    padding: 15px;
+    background-color: $green-900;
+  }
+
+  &__before {
+    position: relative;
+    padding-left: 40px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__enter {
+    padding-right: 15px;
+    border-right: 1px solid #fff;
+    margin-right: 15px;
+
+    &::before {
+      top: 50%;
+      transform: translateY(-50%);
+      width: 25px;
+      height: 32px;
+      background-image: url('../../images/icons/user.svg');
+    }
+  }
+
+  &__link {
+    color: #fff;
+  }
+
+  &__products {
+    padding: 15px;
+    border-bottom: 1px solid $silver-600;
+  }
+
+  &__list {
+    &::before {
+      width: 25px;
+      height: 20px;
+      background-image: url('../../images/aside/nav.svg');
+    }
+  }
+
+  &__list-open {
+    color: #000;
+  }
+
+  &__contacts {
+    padding: 24px 15px;
+    font-style: normal;
+    border-bottom: 1px solid $silver-600;
+    overflow: auto;
+  }
+
+  &__contacts-info {
+    margin-bottom: 20px;
+  }
+
+  &__tel {
+    margin-bottom: 15px;
+
+    &::before {
+      width: 24px;
+      height: 24px;
+      background-image: url('../../images/aside/tel.svg');
+    }
+  }
+
+  &__tel-link {
+    vertical-align: middle;
+    color: $dark-800;
+  }
+
+  &__address {
+    color: $dark-800;
+    line-height: 1.2;
+
+    &::before {
+      top: 5px;
+      width: 24px;
+      height: 33px;
+      background-image: url('../../images/aside/location.svg');
+    }
+  }
+
+  &__social {
+    display: flex;
+  }
+
+  &__social-item:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  &__icon {
+    fill: $dark-800;
+  }
+
+  &__menu {
+    padding: 24px 15px 0;
+    overflow: auto;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  &__menu-link {
+    color: $dark-800;
+    line-height: 1.2;
+  }
+}

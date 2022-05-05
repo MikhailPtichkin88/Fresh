@@ -1,0 +1,376 @@
+.product-page {
+  padding: 48px 0 70px;
+
+  &__inner {
+    display: flex;
+    gap: 30px;
+    padding-bottom: 52px;
+    min-height: 558px;
+
+    @include r(991) {
+      display: block;
+      padding-bottom: 0;
+    }
+  }
+
+  &__slider {
+    width: calc(50% - 15px);
+    padding: 70px 105px;
+    border: 1px solid $silver-600;
+    border-radius: 4px;
+
+    @include r(1378) {
+      padding: 30px 30px;
+      align-self: flex-start;
+    }
+
+    @include r(991) {
+      width: 100%;
+      padding: 10px 10px;
+    }
+
+    @include r(576) {
+      width: 345px;
+      height: 310px;
+      padding: 20px 38px;
+    }
+  }
+
+  &__slide-img {
+    object-fit: cover;
+
+    @include r(1378) {
+      margin: 0 auto;
+    }
+
+    @include r(576) {
+      width: 270px;
+      height: 270px;
+    }
+  }
+
+  &__slider-dots {
+    position: absolute;
+    display: flex;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    & li:not(:last-child) {
+      margin-right: 12px;
+    }
+
+    & button {
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      font-size: 0;
+      background-color: #fff;
+      border: 1px solid $silver-600;
+    }
+
+    & .slick-active button {
+      background-color: $green-900;
+      border: none;
+    }
+
+    @include r(768) {
+      bottom: 10px;
+
+      &:nth-child(2) {
+        bottom: -20px;
+      }
+    }
+  }
+
+  &__prev {
+    left: 22px;
+  }
+
+  &__next {
+    right: 22px;
+  }
+
+  &__content {
+    width: calc(50% - 15px);
+    padding: 20px 0 30px;
+
+    @include r(991) {
+      width: 100%;
+    }
+
+    @include r(576) {
+      padding: 30px 0 30px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 18px;
+    text-transform: initial;
+    text-align: left;
+    line-height: 1.2;
+
+    @include r(1378) {
+      font-size: 24px;
+    }
+
+    @include r(991) {
+      font-size: 26px;
+      width: 100%;
+    }
+
+    @include r(576) {
+      margin-bottom: 30px;
+    }
+
+    &-md {
+      position: relative;
+      padding-bottom: 17px;
+      margin-bottom: 18px;
+      font-size: 18px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: #E5E5E5;
+      }
+    }
+  }
+
+  &__offer {
+    margin-bottom: 18px;
+    min-height: initial;
+  }
+
+  &__hit {
+    font-size: 16px;
+    padding: 6px 9px;
+  }
+
+  &__data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 33px;
+
+    @include r(576) {
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__code {
+    margin-right: 17px;
+    padding: 4px 5px 3px;
+    background-color: $silver-100;
+    letter-spacing: 0.03em;
+    line-height: 1.2;
+    color: $silver-600;
+
+    @include r(576) {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__rating {
+    margin-right: auto;
+
+    @include r(576) {
+      flex-grow: 0;
+      margin-bottom: 18px;
+    }
+  }
+
+  &__quantity {
+    font-size: 16px;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 58px;
+    padding-left: 0;
+    @extend %opensans-700;
+
+    @include r(1378) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__old-price {
+    margin-right: 18px;
+    margin-bottom: 0;
+    font-size: 20px;
+
+    &::after {
+      top: 8px;
+      width: 55px;
+      transform: matrix(0.97, -0.14, -0.28, -0.99, 0, 0);
+    }
+  }
+
+  &__new-price {
+    font-size: 30px;
+    color: $green-900;
+  }
+
+  &__buy {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+
+  &__counter {
+    @include r(1378) {
+      align-self: center;
+    }
+  }
+
+  .jq-number {
+    position: relative;
+    width: 158px;
+    height: 44px;
+    padding: 0 44px;
+    margin-right: 18px;
+
+    @include r(576) {
+      width: 158px;
+      padding: 0 44px;
+      height: 44px;
+    }
+  }
+
+  .jq-number__field {
+    input {
+      height: 44px;
+      width: 70px;
+      padding: 12px 5px;
+      font-size: 20px;
+      line-height: 1;
+      text-align: center;
+      border: none;
+      background-color: $green-100;
+
+      @include r(576) {
+        height: 44px;
+        width: 70px;
+        font-size: 20px;
+        padding: 12px 5px;
+      }
+    }
+  }
+
+  .jq-number__spin {
+    position: absolute;
+    top: 0;
+    width: 44px;
+    height: 44px;
+    background-color: $green-900;
+    @extend %bg-img-auto;
+    cursor: pointer;
+
+    @include r(1378) {
+      height: 32px;
+      width: 32px;
+    }
+
+    @include r(1378) {
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+  .minus {
+    left: 0;
+    background-image: url('../../images/product-page/minus.svg');
+    border-radius: 3px 0 0 3px;
+    background-size: 24px 24px;
+  }
+
+  .plus {
+    right: 0;
+    background-image: url('../../images/product-page/plus.svg');
+    border-radius: 0 3px 3px 0;
+    background-size: 24px 24px;
+  }
+
+  &__purchase {
+    margin-right: auto;
+    padding: 14px 12px 14px 50px;
+    width: initial;
+    height: initial;
+    @extend %opensans-600;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    background-position: bottom 50% left 12px;
+    background-size: 24px 23px;
+
+    @include r(1378) {
+      padding: 10px 10px 10px 40px;
+    }
+
+    @include r(576) {
+      border-radius: 3px;
+    }
+  }
+
+  &__favorite {
+    width: 44px;
+    height: 40px;
+
+    svg {
+      width: 42px;
+      height: 39px;
+    }
+  }
+
+  &__info {
+    margin-bottom: 18px;
+
+    p {
+      line-height: 1.6;
+      letter-spacing: 0.03em;
+      color: $dark-500;
+    }
+  }
+
+  &__link {
+    line-height: 1.2;
+    color: $green-900;
+    letter-spacing: 0.03em;
+    border-bottom: 1px solid transparent;
+    transition: color 0.3s,
+      border 0.3s;
+
+    &:focus {
+      box-shadow: 0 0 0 4px #E0EDCF;
+      border-radius: 3px;
+    }
+
+    &:hover {
+      border-color: $green-900;
+    }
+
+    &:active {
+      color: #4D800C;
+      border-color: #4D800C;
+      box-shadow: none;
+    }
+  }
+
+  .slick-arrow {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @include r(576) {
+    padding: 30px 0 38px;
+  }
+
+}

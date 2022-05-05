@@ -1,0 +1,41 @@
+.product-related {
+  padding: 0 0 46px;
+
+  &__title {
+    font-size: 30px;
+    line-height: 1.2;
+    text-align: left;
+    color: #000;
+    margin-bottom: 60px;
+
+    @include r(576){
+      margin-bottom: 30px;
+      font-size: 25px;
+    }
+  }
+
+  &__slider {
+    margin: 0 -15px;
+  }
+
+  &__slide {
+
+    .product {
+      margin: 0 auto;
+    }
+  }
+
+  &__slider-btn {
+    top: -65px;
+    border: 1px solid $silver-600;
+  }
+
+  &__next {
+    right: 15px;
+  }
+
+  &__prev {
+    left: initial;
+    right: 105px;
+  }
+}

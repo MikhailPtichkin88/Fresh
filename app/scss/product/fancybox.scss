@@ -1,0 +1,85 @@
+.fancybox {
+  &__content {
+    background: #fff !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 750px !important;
+      max-height: 750px !important;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover;
+    }
+  }
+
+  &__slide {
+    padding: 54px 100px;
+    background-color: $silver-600;
+  }
+}
+
+.carousel__dots {
+  top: calc(85% + 0.5rem);
+}
+
+.fancybox__carousel.has-dots {
+  margin-bottom: 0;
+}
+
+.fancybox__content>.carousel__button.is-close {
+  top: 20px;
+  right: 20px;
+}
+
+.carousel__button.is-close {
+
+  svg {
+    width: 32px;
+    height: 32px;
+    stroke-linecap: round;
+
+    filter: initial;
+
+    path {
+      color: $silver-600;
+    }
+  }
+}
+
+.fancybox__nav .carousel__button.is-next {
+  right: 8%;
+
+  svg {
+    color: $dark-500;
+  }
+}
+
+.fancybox__nav .carousel__button.is-prev {
+  left: 8%;
+
+  svg {
+    color: $dark-500;
+  }
+}
+
+.carousel__dots .carousel__dot {
+  width: 24px;
+  height: 22px;
+
+  &:after {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.15);
+    border: 1px solid #C1C1C1;
+  }
+}
+
+.carousel__dots .carousel__dot.is-selected:after {
+
+  background-color: #63A60E;
+  border: 1px solid #63A60E;
+}

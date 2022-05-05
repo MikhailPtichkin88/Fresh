@@ -1,0 +1,46 @@
+.comment {
+  padding-bottom: 24px;
+  border-bottom: 1px solid $silver-600;
+
+  &:last-child {
+    padding: 0;
+    border-bottom: initial;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  &__avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 24px;
+  }
+
+  &__info {
+    font-size: 14px;
+    margin-right: auto;
+  }
+
+  &__author {
+    @extend %opensans-700;
+    color: $dark-900;
+    margin-bottom: 5px;
+  }
+
+  &__date {
+    line-height: 1.7;
+    color: #4F4F4F;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: $dark-500;
+  }
+}

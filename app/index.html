@@ -5,14 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ФрешОк-Главная страница</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
 
   <body>
-
+    <h1 class="sr-only title">ФрешОк интернет-магазин продуктов</h1>
     <div class="wrapper">
 
-    <header class="header">
+      <header class="header">
 
   <div class="header__top">
     <div class="container">
@@ -85,7 +92,7 @@
     
     <ul class="aside__products">
       <li class="aside__list">
-        <a class="aside__list-open" href="#">Каталог товаров</a>
+        <a class="aside__list-open" href="catalog.html">Каталог товаров</a>
       </li>
     </ul>
 
@@ -178,7 +185,7 @@
   </div>
 </aside>
 
-        <a class="logo" href="#">
+        <a class="logo" href="index.html">
           <picture>
             <source media="(max-width: 820px)" srcset="./images/icons/logo-short.svg">
             <source media="(min-width: 821px)" srcset="./images/logo.svg">
@@ -187,11 +194,6 @@
         </a>
 
         <ul class="dropdown header__dropdown">
-          <li class="dropdown__item-btn">
-            <button class="dropdown__btn" type="button">
-              <span class="sr-only">open and close button for dropdown menu</span>
-            </button>
-          </li>
 
           <li class="dropdown__title">
             <button class="dropdown__title-link" type="button">
@@ -200,51 +202,51 @@
 
             <ul class="dropdown__menu">   
               <li class="dropdown__item">
-                <a class="dropdown__link" href="#">
+                <a class="dropdown__link" href="catalog.html">
                   Овощи и фрукты
                 </a>
               </li>
               <li class="dropdown__item">
-                <a class="dropdown__link" href="#">
+                <a class="dropdown__link" href="catalog.html">
                   Бакалея
                 </a>
               </li>
               <li class="dropdown__item">
-                <a class="dropdown__link" href="#">
+                <a class="dropdown__link" href="catalog.html">
                   Молочные продукты
                 </a>
               </li>
               <li class="dropdown__item">
-                <a class="dropdown__link" href="#">
+                <a class="dropdown__link" href="catalog.html">
                   Хлеб
                 </a>
               </li>
               <li class="dropdown__item">
-                <a class="dropdown__link" href="#">
+                <a class="dropdown__link" href="catalog.html">
                   Мясо
                 </a>
               </li>
               <li class="dropdown__item">
-                <a class="dropdown__link" href="#">
+                <a class="dropdown__link" href="catalog.html">
                   Колбаса
                 </a></li>
               <li class="dropdown__item">
-                <a class="dropdown__link" href="#">
+                <a class="dropdown__link" href="catalog.html">
                   Рыба
                 </a>
               </li>
               <li class="dropdown__item">
-                <a class="dropdown__link" href="#">
+                <a class="dropdown__link" href="catalog.html">
                   Алкоголь
                 </a>
               </li>
               <li class="dropdown__item">
-                <a class="dropdown__link" href="#">
+                <a class="dropdown__link" href="catalog.html">
                   Напитки
                 </a>
               </li>
               <li class="dropdown__item">
-                <a class="dropdown__link" href="#">
+                <a class="dropdown__link" href="catalog.html">
                   Торты
                 </a>
               </li>
@@ -400,11 +402,10 @@
   </nav>
 
 </header>
-    
-  <main class="main">
- 
-      <h1 class="sr-only title">ФрешОк интернет-магазин продуктов</h1>
-<section class="special-offer">
+
+      <main class="main">
+
+        <section class="special-offer">
   <h2 class="sr-only title">Специальные предложения</h2>
   <ul class="special-offer__slider">
     <li class="special-offer__slide">
@@ -416,7 +417,7 @@
           </h3>
           <p class="special-offer__descr">Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%.
             Торопитесь!</p>
-          <a class="btn special-offer__btn" href="#">Купить сейчас</a>
+          <a class="btn special-offer__btn" href="catalog.html">Купить сейчас</a>
         </div>
       </div>
     </li>
@@ -429,7 +430,7 @@
             <span class="special-offer__offer"> АКЦИЯ: 3 кг по цене 1</span>
           </h3>
           <p class="special-offer__descr">Только с 12 по 15 июля скидка на домашние помидорчики</p>
-          <a class="btn special-offer__btn" href="#">Купить сейчас</a>
+          <a class="btn special-offer__btn" href="catalog.html">Купить сейчас</a>
         </div>
       </div>
     </li>
@@ -441,7 +442,7 @@
             Пусть остальные позеленеют от зависти
             <span class="special-offer__offer"> Распродажа зелени</span>
           </h3>
-          <a class="btn special-offer__btn" href="#">Купить сейчас</a>
+          <a class="btn special-offer__btn" href="catalog.html">Купить сейчас</a>
         </div>
       </div>
     </li>
@@ -449,9 +450,9 @@
   </ul>
 
 </section>
- 
-   
-      <section class="benefits">
+
+
+        <section class="benefits">
   <div class="container">
     <h2 class="sr-only">Преимущества</h2>
     <ul class="benefits__wrapper">
@@ -485,7 +486,7 @@
   </div>
 </section>
 
-      <section class="best" data-ref="container-1">
+        <section class="best" data-ref="container-1">
   <div class="container">
     <h2 class="title best__title">Топовые товары</h2>
     <ul class="best__btns">
@@ -533,7 +534,7 @@
             </button>
           </div>
 
-          <a class="product__overlay" href="#"><img class="product__img" width="300" height="225"
+          <a class="product__overlay" href="product.html"><img class="product__img" width="300" height="225"
               src="./images/best-products/pineapple.jpg" alt="pineale"></a>
           <p class="product__descr">Ананас, 1кг</p>
 
@@ -553,7 +554,9 @@
               </button>
             </div>
 
-            <button class="btn product__purchase" type="button"></button>
+            <button class="btn product__purchase" type="button">
+              <span class="sr-only">add to cart button</span>
+            </button>
           </div>
         </article>
       </li>
@@ -573,7 +576,7 @@
             </button>
           </div>
 
-          <a class="product__overlay" href="#">
+          <a class="product__overlay" href="product.html">
             <img class="product__img" src="./images/best-products/lemon.jpg" width="300" height="225"
               alt="lemon"></a>
           <p class="product__descr">Лимон, 1кг</p>
@@ -613,7 +616,7 @@
             </button>
           </div>
 
-          <a class="product__overlay" href="#"><img class="product__img" width="300" height="225"
+          <a class="product__overlay" href="product.html"><img class="product__img" width="300" height="225"
               src="./images/best-products/dragon-fruit.jpg" alt="dragon-fruit"></a>
           <p class="product__descr">Питахайя красная с белой мякотью, 1шт</p>
 
@@ -633,7 +636,9 @@
               </button>
             </div>
 
-            <button class="btn product__purchase" type="button"></button>
+            <button class="btn product__purchase" type="button">
+              <span class="sr-only">add to cart button</span>
+            </button>
           </div>
         </article>
       </li>
@@ -652,7 +657,7 @@
             </button>
           </div>
 
-          <a class="product__overlay" href="#"><img class="product__img" width="300" height="225"
+          <a class="product__overlay" href="product.html"><img class="product__img" width="300" height="225"
               src="/images/best-products/ketchup.jpg" alt="ketcup"></a>
           <p class="product__descr">Кетчуп томатный детский органический Bio-Zentrale 500мл, 1 шт</p>
 
@@ -672,7 +677,9 @@
               </button>
             </div>
 
-            <button class="btn product__purchase" type="button"></button>
+            <button class="btn product__purchase" type="button">
+              <span class="sr-only">add to cart button</span>
+            </button>
           </div>
         </article>
       </li>
@@ -691,7 +698,7 @@
             </button>
           </div>
 
-          <a class="product__overlay" href="#"><img class="product__img" width="300" height="225"
+          <a class="product__overlay" href="product.html"><img class="product__img" width="300" height="225"
               src="./images/best-products/carrot.jpg" alt="dragon-fruit"></a>
           <p class="product__descr">Морковь молодая с бабушкиной грядки, 1кг</p>
 
@@ -711,7 +718,9 @@
               </button>
             </div>
 
-            <button class="btn product__purchase" type="button"></button>
+            <button class="btn product__purchase" type="button">
+              <span class="sr-only">add to cart button</span>
+            </button>
           </div>
         </article>
       </li>
@@ -730,7 +739,7 @@
             </button>
           </div>
 
-          <a class="product__overlay" href="#"><img class="product__img" width="300" height="225"
+          <a class="product__overlay" href="product.html"><img class="product__img" width="300" height="225"
               src="./images/best-products/juice.jpg" alt="dragon-fruit"></a>
           <p class="product__descr">Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин
             безалкогольн...</p>
@@ -751,7 +760,9 @@
               </button>
             </div>
 
-            <button class="btn product__purchase" type="button"></button>
+            <button class="btn product__purchase" type="button">
+              <span class="sr-only">add to cart button</span>
+            </button>
           </div>
         </article>
       </li>
@@ -771,7 +782,7 @@
             </button>
           </div>
 
-          <a class="product__overlay" href="#"><img class="product__img" width="300" height="225"
+          <a class="product__overlay" href="product.html"><img class="product__img" width="300" height="225"
               src="./images/best-products/coffee.jpg" alt="dragon-fruit"></a>
           <p class="product__descr">Кофе с коноплей органический Caffé Salomoni 250г</p>
 
@@ -791,7 +802,9 @@
               </button>
             </div>
 
-            <button class="btn product__purchase" type="button"></button>
+            <button class="btn product__purchase" type="button">
+              <span class="sr-only">add to cart button</span>
+            </button>
           </div>
         </article>
       </li>
@@ -810,7 +823,7 @@
             </button>
           </div>
 
-          <a class="product__overlay" href="#"><img class="product__img" width="300" height="225"
+          <a class="product__overlay" href="product.html"><img class="product__img" width="300" height="225"
               src="./images/best-products/paprik.jpg" alt="paprica"></a>
           <p class="product__descr">Перец оранжевый, 1кг</p>
 
@@ -830,7 +843,9 @@
               </button>
             </div>
 
-            <button class="btn product__purchase" type="button"></button>
+            <button class="btn product__purchase" type="button">
+              <span class="sr-only">add to cart button</span>
+            </button>
           </div>
         </article>
       </li>
@@ -840,7 +855,7 @@
   </div>
 </section>
 
-      <section class="banners">
+        <section class="banners">
   <div class="container">
     <h2 class="sr-only">Выгодные предложения</h2>
     <ul class="banners__wrapper">
@@ -848,25 +863,25 @@
         <p class="banners__descr">Свежайшие фрукты</p>
         <h3 class="banners__title title">Начни фруктовое лето
           всего От 99 ₽ </h3>
-        <a class="banners__link" href="#">перейти к покупкам</a>
+        <a class="banners__link" href="catalog.html">перейти к покупкам</a>
       </li>
 
       <li class="banners__banner banners__banner--veg">
         <p class="banners__descr">сезонная распродажа</p>
         <h3 class="banners__title title">овощепад до -50% </h3>
-        <a class="banners__link" href="#" >перейти к покупкам</a>
+        <a class="banners__link" href="catalog.html" >перейти к покупкам</a>
       </li>
 
       <li class="banners__banner banners__banner--bread">
         <p class="banners__descr">ням-ням</p>
         <h3 class="banners__title title">свежий хлебчик</h3>
-        <a class="banners__link" href="#">перейти к покупкам</a>
+        <a class="banners__link" href="catalog.html">перейти к покупкам</a>
       </li>
     </ul>
   </div>
 </section>
 
-      <section class="promo" data-ref="container-2">
+        <section class="promo" data-ref="container-2">
 
   <div class="container">
     <h2 class="title best__title promo__title">Акции</h2>
@@ -1023,7 +1038,7 @@
   </div>
 </section>
 
-      <section class="partners">
+        <section class="partners">
   <div class="container">
     <h2 class="sr-only">Partners section</h2>
     <ul class="partners__wrapper">
@@ -1095,11 +1110,11 @@
   </div>
 </section>
 
-      <section class="news">
+        <section class="news">
   <div class="container">
     <div class="news__inner">
       <h2 class="title news__title">наши новости</h2>
-      <a class="news__show-all banners__link" href="#">ВСЕ НОВОСТИ</a>
+      <a class="news__show-all banners__link" href="#">все новости</a>
     </div>
     <ul class="news__wrapper">
 
@@ -1142,10 +1157,10 @@
 
       </main>
 
-  <footer class="footer">
+      <footer class="footer">
   <div class="footer__top">
     <div class="container">
-      <a class="logo footer__logo" href="#">
+      <a class="logo footer__logo" href="index.html">
         <img class="logo__img" src="./images/logo.svg" alt="site logo" width="200" height="60">
       </a>
 
@@ -1158,7 +1173,7 @@
           <div class="footer__form-wrapper">
             <input class="input footer__input" id="email" name="email" type="email" placeholder="email@email.com"
               required>
-            <button class="btn input-btn footer__btn" type="submit">ПОДПИСАТЬСЯ</button>
+            <button class="btn input-btn footer__btn" type="submit">Подписаться</button>
           </div>
         </form>
 
@@ -1281,10 +1296,10 @@
   </div>
 </footer> 
 
-    </div> 
+    </div>
 
 
-  <script src="js/main.min.js"></script>
+    <script src="js/main.min.js"></script>
   </body>
 
 </html>
