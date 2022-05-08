@@ -3,15 +3,14 @@
   <div class="header__top">
     <div class="container">
       <nav class="menu">
+        <button class="menu__burger" type="button">
+          <span class="sr-only">burger-menu</span>
+          <span class="menu__burger-line menu__burger-line--top"></span>
+          <span class="menu__burger-line menu__burger-line--mid"></span>
+          <span class="menu__burger-line menu__burger-line--bottom"></span>
+        </button>
+
         <ul class="menu__list">
-          <li class="menu__item--button">
-            <button class="menu__burger" type="button">
-              <span class="sr-only">burger-menu</span>
-             <span class="menu__burger-line menu__burger-line--top"></span>
-             <span class="menu__burger-line menu__burger-line--mid"></span>
-             <span class="menu__burger-line menu__burger-line--bottom" ></span>
-            </button>
-          </li>
           <li class="menu__item-left">
             <a class="menu__link menu__link--left menu__link--adress" href="#">
               адрес и время доставки
@@ -50,7 +49,7 @@
     <div class="container">
       <div class="header__wrapper">
 
-      @@include('../main/aside.html')
+        @@include('../main/aside.html')
 
         <a class="logo" href="index.html">
           <picture>
@@ -67,7 +66,7 @@
               Каталог продуктов
             </button>
 
-            <ul class="dropdown__menu">   
+            <ul class="dropdown__menu">
               <li class="dropdown__item">
                 <a class="dropdown__link" href="catalog.html">
                   Овощи и фрукты
@@ -127,7 +126,7 @@
                   Чай, кофе
                 </a>
               </li>
-            </ul> 
+            </ul>
           </li>
         </ul>
 
@@ -135,8 +134,8 @@
           <label for="search" class="header__label">
             <span class="sr-only">форма для поиска</span>
           </label>
-          <input class="input header__input" id="search" type="search" name="search"
-            placeholder="Найти в магазине ..." required>
+          <input class="input header__input" id="search" type="search" name="search" placeholder="Найти в магазине ..."
+            required>
           <button class="header__icon-btn" type="submit">
             <span class="sr-only">search button icon</span>
           </button>
@@ -148,7 +147,7 @@
             <button class="user-nav__link
           user-nav__link--search" type="button">
               <span class="sr-only">Поиск</span>
-          </button>
+            </button>
           </li>
           <li class="user-nav__item">
             <a class="user-nav__link
@@ -163,89 +162,7 @@
               <span class="user-nav__num">12</span>
             </a>
           </li>
-          
-          <li class="cart-menu">
-            <div class="cart-menu__header">
 
-              <div class="cart-menu__header-wrapper">
-                <div class="cart-menu__title">Корзина </div>
-                <button class="cart-menu__btn-clear" type="button">
-                  очистить корзину
-                </button>
-              </div>
-              <button class="cart-menu__close" type="button">
-                <span class="sr-only">cart-menu close button</span>
-              </button>                   
-            </div>
-
-            <ul class="cart-menu__main">
-
-              <li class="cart-menu__item">
-                <img class="cart-menu__img" width="60" height="60" src="@@webRoot/images/cart-menu/pineapple.jpg" alt="pineaple">
-
-                <div class="cart-menu__info">
-                  <p class="cart-menu__descr">Ананас, 1 кг</p>
-                  <div class="cart-menu__price">
-                    999<span class="cart-menu__lowercase">₽</span>
-                  </div>
-                </div>
-              
-                <div class="counter cart-menu__counter">
-                  <button class="counter__btn counter__btn--minus" type="button"></button>
-                  <div class="counter__num">2</div>
-                  <button class="counter__btn counter__btn--plus" type="button"></button>
-                </div>
-
-                <div class="cart-menu__price cart-menu__price--total">
-                  1998<span class="cart-menu__lowercase">₽</span>
-                </div>
-                <button class="cart-menu__item-close" type="button">
-                  <span class="sr-only">item close button</span>
-                </button>                      
-              </li>
-
-              <li class="cart-menu__item">
-                <img class="cart-menu__img" src="@@webRoot/images/best-products/dragon-fruit.jpg" width="60" height="60" style="object-fit: contain;" alt="dragon-fruit">
-
-                <div class="cart-menu__info">
-                  <p class="cart-menu__descr">Питахайя красная с белой мякотью, 1шт</p>
-                  <div class="cart-menu__price">
-                    1019<span class="cart-menu__lowercase">₽</span>
-                  </div>
-                </div>
-
-                <div class="counter cart-menu__counter">
-                  <button class="counter__btn counter__btn--minus" type="button"></button>
-                  <div class="counter__num">2</div>
-                  <button class="counter__btn counter__btn--plus" type="button"></button>
-                </div>
-
-                <div class="cart-menu__price cart-menu__price--total">
-                  2038<span class="cart-menu__lowercase">₽</span>
-                </div>
-                <button class="cart-menu__item-close" type="button">
-                  <span class="sr-only">item close button</span>
-                </button>                      
-              </li>
-            </ul>
-
-            <div class="cart-menu__footer">
-              <div class="cart-menu__total-price">
-                <div class="cart-menu__total-title">
-                  Товаров на сумму
-                </div>
-                <div class="cart-menu__total-num">
-                  2038<span class="cart-menu__lowercase">₽</span> 
-                </div>
-              </div>
-              <button class="cart-menu__submit" type="button">Оформить заказ</button>
-            </div>
-          </li>
-
-          <li class="overlay">
-            <span class="sr-only">cart menu active overlay</span>
-          </li>
-          
           <li class="user-nav__item">
             <button class="user-nav__link
           user-nav__link--cart" type="button">
@@ -254,15 +171,99 @@
             </button>
           </li>
         </ul>
- 
+
+        <div class="cart-menu">
+          <div class="cart-menu__header">
+
+            <div class="cart-menu__header-wrapper">
+              <div class="cart-menu__title">Корзина </div>
+              <button class="cart-menu__btn-clear" type="button">
+                очистить корзину
+              </button>
+            </div>
+            <button class="cart-menu__close" type="button">
+              <span class="sr-only">cart-menu close button</span>
+            </button>
+          </div>
+
+          <ul class="cart-menu__main">
+
+            <li class="cart-menu__item">
+              <img class="cart-menu__img" width="60" height="60" src="@@webRoot/images/cart-menu/pineapple.jpg"
+                alt="pineaple">
+
+              <div class="cart-menu__info">
+                <p class="cart-menu__descr">Ананас, 1 кг</p>
+                <div class="cart-menu__price">
+                  999<sub>₽</sub>
+                </div>
+              </div>
+
+              <div class="counter cart-menu__counter">
+                <button class="counter__btn counter__btn--minus" type="button"></button>
+                <div class="counter__num">2</div>
+                <button class="counter__btn counter__btn--plus" type="button"></button>
+              </div>
+
+              <div class="cart-menu__price cart-menu__price--total">
+                1998<sub>₽</sub>
+              </div>
+              <button class="cart-menu__item-close" type="button">
+                <span class="sr-only">item close button</span>
+              </button>
+            </li>
+
+            <li class="cart-menu__item">
+              <img class="cart-menu__img" src="@@webRoot/images/best-products/dragon-fruit.jpg" width="60" height="60"
+                style="object-fit: contain;" alt="dragon-fruit">
+
+              <div class="cart-menu__info">
+                <p class="cart-menu__descr">Питахайя красная с белой мякотью, 1шт</p>
+                <div class="cart-menu__price">
+                  1019<sub>₽</sub>
+                </div>
+              </div>
+
+              <div class="counter cart-menu__counter">
+                <button class="counter__btn counter__btn--minus" type="button"></button>
+                <div class="counter__num">2</div>
+                <button class="counter__btn counter__btn--plus" type="button"></button>
+              </div>
+
+              <div class="cart-menu__price cart-menu__price--total">
+                2038<sub>₽</sub>
+              </div>
+              <button class="cart-menu__item-close" type="button">
+                <span class="sr-only">item close button</span>
+              </button>
+            </li>
+          </ul>
+
+          <div class="cart-menu__footer">
+            <div class="cart-menu__total-price">
+              <div class="cart-menu__total-title">
+                Товаров на сумму
+              </div>
+              <div class="cart-menu__total-num">
+                2038<span class="cart-menu__lowercase">₽</span>
+              </div>
+            </div>
+            <button class="cart-menu__submit" type="button">Оформить заказ</button>
+          </div>
+        </div>
+
+        <div class="overlay">
+          <span class="sr-only">cart menu active overlay</span>
+        </div>
       </div>
     </div>
+
     <form class="header__search header__search--mobile" action="#">
       <label for="popup-search" class="header__label">
         <span class="sr-only">форма для поиска</span>
       </label>
-      <input class="input header__input" id="popup-search" type="search" name="popup-search"
-        placeholder="Я ищу..." required>
+      <input class="input header__input" id="popup-search" type="search" name="popup-search" placeholder="Я ищу..."
+        required>
       <button class="header__icon-btn" type="submit"><span class="sr-only">search button icon</span></button>
       <button class="btn input-btn header__btn" type="submit">поиск</button>
     </form>

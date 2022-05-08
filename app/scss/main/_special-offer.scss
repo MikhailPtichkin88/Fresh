@@ -6,18 +6,10 @@
   }
 
   &__slide {
+    position: relative;
     padding: 140px 0 115px;
     min-height: 600px;
-    background-image: url('../images/slider/bg1.jpg');
-    @extend %bg-img-cover;
-  }
-
-  &__slide--tomatos {
-    background-image: url('../images/slider/bg-2.jpg');
-  }
-
-  &__slide--herbs {
-    background-image: url('../images/slider/bg-3.jpg');
+   
   }
 
   &__wrapper {
@@ -42,6 +34,7 @@
   &__offer {
     display: block;
     color: $red-900;
+    font-weight: 900;
     @include line-clamp(1);
   }
 
@@ -56,6 +49,17 @@
 
   &__dots {
     display: none;
+  }
+
+  &__img {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
   }
 }
 

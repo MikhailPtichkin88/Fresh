@@ -29,7 +29,7 @@
       position: absolute;
       top: 20px;
       right: 20px;
-background-size: 18px 18px;
+      background-size: 18px 18px;
      
     }
   }
@@ -59,7 +59,7 @@ background-size: 18px 18px;
       right: 20px;
       width: 18px;
       height: 11px;
-      background-image: url('../../../images/catalog/arrow-up.svg');
+      background-image: url('../images/catalog/arrow-up.svg');
       @extend %bg-img-auto;
       z-index: 1;
       transition: transform 0.3s;
@@ -132,6 +132,7 @@ background-size: 18px 18px;
       display: inline-flex;
       align-items: center;
       user-select: none;
+      cursor: pointer;
     }
 
     &+label::before {
@@ -152,7 +153,7 @@ background-size: 18px 18px;
     &:checked+label::before {
       border-color: $dark-500;
       background-color: $silver-100;
-      background-image: url("../../../images/catalog/checked.svg");
+      background-image: url("../images/catalog/checked.svg");
     }
 
     &:not(:disabled):not(:checked)+label:hover::before {
@@ -166,15 +167,11 @@ background-size: 18px 18px;
     &-none:checked+label {
       color: $green-900;
     }
-
-
-
   }
 
   &__label {
     position: relative;
     vertical-align: middle;
-
   }
 }
 
@@ -272,6 +269,7 @@ background-size: 18px 18px;
     top: 30px;
     height: 2px;
     background-color: $green-900;
+    cursor: pointer;
   }
 
   &--flat .irs-handle {
@@ -280,6 +278,7 @@ background-size: 18px 18px;
     height: 18px;
     border-radius: 50%;
     background-color: $green-900;
+    cursor: pointer;
 
     i:first-child {
       display: none;

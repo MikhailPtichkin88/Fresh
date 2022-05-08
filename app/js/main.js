@@ -64,8 +64,8 @@ $(function () {
 
 
   $('.special-offer__slider').slick({
-    prevArrow: '<div class="prev"></div>',
-    nextArrow: '<div class="next"></div>',
+    prevArrow: '<button class="prev"></button>',
+    nextArrow: '<button class="next"></button>',
     dots: false,
     dotsClass: 'special-offer__dots',
     responsive: [{

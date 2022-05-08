@@ -43,7 +43,7 @@
     letter-spacing: normal;
     @include line-clamp(2);
 
-    @include r(576){
+    @include r(576) {
       font-size: 24px;
       margin-bottom: 70px;
     }
@@ -58,7 +58,7 @@
     border-bottom: 2px solid $dark-500;
     @include line-clamp(1);
 
-    @include r(576){
+    @include r(576) {
       @extend %opensans-700;
       font-size: 14px;
       line-height: 1;
@@ -68,14 +68,13 @@
     }
   }
 
+
   &__banner {
+    position: relative;
     width: calc(25% - 15px);
     padding: 76px 32px;
-    border-radius: 6px;
-    @extend %bg-img-cover;
 
     &--veg {
-      background-image: url('../images/banners/veg.jpg');
 
       @include r(991) {
         width: calc(50% - 15px);
@@ -87,12 +86,11 @@
     }
 
     &--bread {
-      background-image: url('../images/banners/bread.jpg');
 
       @include r(991) {
         width: calc(50% - 15px);
       }
-      
+
       @include r(576) {
         width: 100%;
       }
@@ -100,7 +98,6 @@
 
     &--big {
       width: 50%;
-      background-image: url('../images/banners/big.jpg');
       color: #fff;
       text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
 
@@ -117,7 +114,8 @@
       @include r(991) {
         width: 100%;
       }
-      @include r(576){
+
+      @include r(576) {
         .banners__title {
           width: 250px;
         }
@@ -136,7 +134,15 @@
   @include r(576) {
     padding: 25px 0 20px;
   }
+
+  &__img {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+  }
 }
-
-
-  

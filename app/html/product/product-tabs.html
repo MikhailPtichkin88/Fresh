@@ -19,38 +19,38 @@
 
   <ul class="product-tabs__content">
     <li class="product-tabs__tab  product-tabs__tab--active" id="tab-1">
-      <p class="product-tabs__descr">Питахайя – это источник питательных веществ и витаминов. Содержит витамин С,
+      <p>Питахайя – это источник питательных веществ и витаминов. Содержит витамин С,
         который способствует укреплению
         иммунной системы. В составе питайи много клетчатки, она благотворно влияет на работу ЖКТ. Оказывает
         противовоспалительное действие, так как фрукт богат антиоксидантами. При употреблении питахайи, понижается
         уровень сахара в крови, улучшается зрение и работа сердечно–сосудистой системы. Так как фрукт низкокалорийный и
         состоит на 90% из воды, способствует снижению веса.
       </p>
-      <p class="product-tabs__descr">
+      <p>
         Витамины: С, Е, РР, витамины группы В
       </p>
-      <p class="product-tabs__descr">Микроэлементы: железо, калий, кальций, магний, фосфор
+      <p>Микроэлементы: железо, калий, кальций, магний, фосфор
       </p>
-      <p class="product-tabs__descr">Внешний вид товара может отличаться от изображений, представленных на сайте.</p>
+      <p>Внешний вид товара может отличаться от изображений, представленных на сайте.</p>
     </li>
 
     <li class="product-tabs__tab" id="tab-2">
-      <p class="product-tabs__props">
+      <p>
         <span>Вес:</span> 250-350 г;
       </p>
-      <p class="product-tabs__props">
+      <p>
         <span>Калорийность (на 100г):</span> 50 ккал;
       </p>
-      <p class="product-tabs__props">
+      <p>
         <span>Условия хранения:</span> температура от +3 до +8;
       </p>
-      <p class="product-tabs__props">
+      <p>
         <span>Другие названия:</span> Драконов фрукт, Глаз дракона;
       </p>
-      <p class="product-tabs__props">
+      <p>
         <span>Страна происхождения:</span> Вьетнам;
       </p>
-      <p class="product-tabs__props">
+      <p>
         <span>Срок хранения:</span> до 5 дней.
       </p>
     </li>
@@ -60,13 +60,14 @@
 
       <div class="product-tabs__comments">
         <article class="comment product-tabs__comment">
+          <h3 class="sr-only">Product comment-feedback</h3>
           <div class="comment__header">
-            <img class="comment__avatar" src="../../images/product-page/avatar.jpg" alt="avatar">
+            <img class="comment__avatar" src="@@webRoot/images/product-page/avatar.jpg" alt="avatar">
             <div class="comment__info">
               <div class="comment__author">Андрей</div>
               <div class="comment__date">10.06.2021</div>
             </div>
-            <div class="comment__rating" data-rateyo-rating="4"></div>
+            <div class="comment__rating" data-rateyo-rating="4" data-rateyo-read-only="true"></div>
           </div>
           <div class="comment__text">
             Яркий цвет, нежный вкус. Очень свежий и приятный, буду пробовать еще!))
@@ -74,13 +75,14 @@
         </article>
 
         <article class="comment product-tabs__comment">
+          <h3 class="sr-only">Product comment-feedback</h3>
           <div class="comment__header">
-            <img class="comment__avatar" src="../../images/product-page/avatar.jpg" alt="avatar">
+            <img class="comment__avatar" src="@@webRoot/images/product-page/avatar.jpg" alt="avatar">
             <div class="comment__info">
               <div class="comment__author">Екатерина Белая</div>
               <div class="comment__date">7.06.2021</div>
             </div>
-            <div class="comment__rating" data-rateyo-rating="5"></div>
+            <div class="comment__rating" data-rateyo-rating="5" data-rateyo-read-only="true"></div>
           </div>
           <div class="comment__text">
             Цвет, конечно, очень насыщенный! Ожидаешь, что и вкус будет такой же яркий (просто взрыв), но нет. Вкус
@@ -139,8 +141,8 @@
 
         <div class="product-tabs__form-data">
           <div class="product-tabs__review">
-            <label for="comment-text" class="product-tabs__label">Ваш отзыв *</label>
-            <textarea class="product-tabs__textarea" name="product-textarea" id="product-textarea" required
+            <label  class="product-tabs__label" for="comment-textarea">Ваш отзыв *</label>
+            <textarea class="product-tabs__textarea" name="comment-textarea" id="comment-textarea" required
               placeholder="Введите текст отзыва"></textarea>
           </div>
 

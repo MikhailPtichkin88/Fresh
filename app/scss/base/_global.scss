@@ -70,8 +70,6 @@ section {
 
 .input {
 	border: none;
-	border-top-left-radius: 6px;
-	border-bottom-left-radius: 6px;
 }
 
 .btn {
@@ -125,8 +123,6 @@ section {
 	border-top-right-radius: 6px;
 	border-bottom-right-radius: 6px;
 }
-
-
 
 .counter {
 	display: flex;
@@ -252,6 +248,27 @@ section {
 		&:active {
 			border: none;
 			box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+		}
+	}
+
+	span.pagination__prev,
+	span.pagination__next{
+		border-color: transparent;
+	}
+
+	span.pagination__link {
+		&:hover {
+			border-color: $dark-500;
+		}
+
+		&:focus {
+			border-color: $dark-500;
+			box-shadow:none;
+		}
+
+		&:active {
+			border-color: $dark-500;
+			box-shadow: none;
 		}
 	}
 

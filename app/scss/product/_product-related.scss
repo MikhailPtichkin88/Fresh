@@ -8,7 +8,7 @@
     color: #000;
     margin-bottom: 60px;
 
-    @include r(576){
+    @include r(576) {
       margin-bottom: 30px;
       font-size: 25px;
     }
@@ -37,5 +37,11 @@
   &__prev {
     left: initial;
     right: 105px;
+  }
+
+  .product-page__slider-dots {
+    @include r(768) {
+      bottom: -20px;
+    }
   }
 }

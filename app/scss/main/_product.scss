@@ -97,6 +97,12 @@
     cursor: pointer;
     @extend %transition;
 
+    &--position{
+      position: absolute;
+      top: 12px;
+      right: 12px;
+    }
+
     &:hover {
       .product__heart {
         fill: $yellow-900;

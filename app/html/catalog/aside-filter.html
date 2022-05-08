@@ -58,14 +58,14 @@
           </label>
         </li>
         <li class="aside-filters__item">
-          <input class="aside-filters__checkbox aside-filters__checkbox-none" type="checkbox" name="alcohol" id="alcohol">
-          <label  for="alcohol">
+          <input class="aside-filters__checkbox aside-filters__checkbox-none" type="checkbox" name="alcohol1" id="alcohol1">
+          <label  for="alcohol1">
            Алкоголь
           </label>
         </li>
         <li class="aside-filters__item">
-          <input class="aside-filters__checkbox aside-filters__checkbox-none" type="checkbox" name="alcohol" id="alcohol">
-          <label  for="alcohol">
+          <input class="aside-filters__checkbox aside-filters__checkbox-none" type="checkbox" name="alcohol2" id="alcohol2">
+          <label  for="alcohol2">
            Алкоголь
           </label>
         </li>
@@ -155,9 +155,10 @@
       </button>
       <ul class="aside-filters__menu price aside-filters__menu--active">
         <li class=" price__item">
-          <form class="price__form" action="#">
+          <label class="price__form">
             <input class="price__input js-range-slider" type="text">
-          </form>
+            <span class="sr-only">price filter</span>
+          </label>
           <div class="extra-controls">
             <label class="price__label price__label-from" for="price-from">от
               <input class="js-input-from price__input-from" name="price-from" id="price-from" type="text" value="0" />

@@ -68,22 +68,19 @@
     &.product-tabs__tab--active {
       display: block;
     }
-  }
-
-  &__descr {
-    &:not(:last-child) {
-      margin-bottom: 30px;
+    &:first-child p{
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
     }
-  }
-
-  &__props {
-    &:not(:last-child) {
-      margin-bottom: 10px;
-    }
-
-    span {
-      @extend %opensans-700;
-      color: $dark-500;
+    &:nth-child(2) p{
+      span {
+        @extend %opensans-700;
+        color: $dark-500;
+      }
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
     }
   }
 
